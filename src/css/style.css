@@ -1,0 +1,140 @@
+body {
+    background-color: var(--neutral-dark);
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+.nft-card {
+    max-width: 350px;
+    background-color: var(--neutral-medium);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.nft-card .image-link .image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nft-card .image-link {
+    position: relative;
+    display: flex;
+}
+
+.nft-card .image-link::before {
+    content: '';
+    background-color: var(--primary-medium);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.nft-card .image-link::after {
+    content: '';
+    background: url(../images/icons/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.nft-card .image-link:hover::before {
+    opacity: 0.4;
+}
+
+.nft-card .image-link:hover::after {
+    opacity: 1;
+}
+
+.title-link .title {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 20px 0 15px;
+}
+
+.title-link .title:hover {
+    color: var(--primary-medium);
+    transition: 0.3s ease-in;
+}
+
+.about-text {
+    font-size: 18px;
+    color: var(--primary-soft);
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.components {
+    display: flex;
+    justify-content: space-between;
+    margin: 23px 0 23px;
+}
+
+.etherium-price {
+    width: 102px;
+    display: flex;
+}
+
+.etherium-price img {
+    margin-right: 5px;
+}
+
+.eth {
+    color: var(--primary-medium);
+}
+
+.days {
+    width: 102px;
+    display: flex;
+}
+
+.days img {
+    margin-right: 6px;
+}
+
+.days-left {
+    color: var(--primary-soft);
+}
+
+hr {
+    color: var(--neutral-soft);
+}
+
+.creator-info {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.creator-info .creator-image {
+    max-width: 32px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.creator-info .info {
+    color: var(--primary-soft);
+}
+
+.creator-info .info .creator-name {
+    color: #ffffff;
+}
+
+.creator-info .info .creator-name:hover {
+    color: var(--primary-medium);
+    transition: 0.3s ease-in;
+}
+
